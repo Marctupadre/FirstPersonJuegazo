@@ -12,10 +12,10 @@ public class Winlevel : MonoBehaviour
     {
         _winPanel.SetActive(false);
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         _winPanel.SetActive(false);
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             _winPanel.SetActive(true);
 
